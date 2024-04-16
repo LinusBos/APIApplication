@@ -1,13 +1,14 @@
 package org.example.UI;
 
 import org.example.ConnectApi;
+import org.example.Shoe;
 
 import javax.swing.*;
-import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
+import java.util.ArrayList;
 
 public class ShoeForm extends JFrame {
     private JPanel mainPanel;
@@ -21,6 +22,7 @@ public class ShoeForm extends JFrame {
     private JLabel titleLabel;
     private JTextField brandTextField;
     private JTextField genderTextField;
+    private JButton removeShoeButton;
     private JFrame jFrame;
 
     public ShoeForm(ConnectApi connectApi) {
@@ -104,6 +106,16 @@ public class ShoeForm extends JFrame {
                     }
 
                 }
+
+            }
+        });
+        removeShoeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ArrayList<Shoe> shoes = new ArrayList<>();
+                shoes = connectApi.getAllShoes();
+                RemoveShoesForm removeShoesForm = new RemoveShoesForm(connectApi, shoes);
+                removeShoesForm.showWindow();
 
             }
         });

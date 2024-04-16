@@ -9,11 +9,21 @@ import lombok.*;
 @ToString
 public class Shoe {
 
-    private String name;
+    private String shoeName;
     private int size;
-    private String brand;
-    private String gender;
-    private String style;
-    private String photo;
+    private String shoeBrand;
+    private String shoeGender;
+    private String shoeStyle;
+    private String shoePhoto;
+    private int shoeId;
+
+    public Shoe(int shoeId, String shoeName, String shoeBrand, String shoeGender, String shoeStyle, String shoePhoto) {
+        this.shoeId = shoeId;
+        this.shoeName = shoeName;
+        this.shoeBrand = shoeBrand;
+        this.shoeGender = shoeGender;
+        this.shoeStyle = shoeStyle;
+        this.shoePhoto = shoePhoto;
+    }
 
 }
