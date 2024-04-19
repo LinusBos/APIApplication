@@ -152,7 +152,7 @@ public class ConnectApi {
         } catch (Exception e) {
             return "Connection failed.";
         }
-        return "Something went bad.";
+        return "Wrong password!";
     }
     public String updateUser(User user){
         try {

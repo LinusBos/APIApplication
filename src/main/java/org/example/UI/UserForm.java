@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// TODO Kolla igenom Bug-catch
+
 public class UserForm extends JFrame {
     private JPanel mainPanel;
     private JPanel inputsPanel;
